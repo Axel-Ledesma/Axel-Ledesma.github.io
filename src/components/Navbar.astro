@@ -1,22 +1,84 @@
-<section>
-  <nav class="h-20 px-8 flex items-end md:justify-center">
+<section id="section" class="move">
+  <nav class="h-20 px-8 flex items-end md:justify-center fixed w-full z-50">
     <input type="checkbox" id="menu" class="peer hidden" />
     <label
       for="menu"
-      class="bg-abrir-menu size-10 bg-cover bg-center cursor-pointer peer-checked:bg-cerrar-menu transition-all duration-300 z-40 md:hidden"
+      class="bg-abrir-menu size-10 bg-cover bg-center cursor-pointer peer-checked:bg-cerrar-menu transition-all duration-300 md:hidden z-40"
     ></label>
     <div
-      class="fixed inset-0 bg-gradient-to-b from-[#000] to-[#18091d] -translate-y-full peer-checked:translate-y-0 transition-all duration-500 md:static md:translate-x-0 md:bg-none z-30"
+      class="fixed inset-0 bg-gradient-to-b from-[#000] to-[#18091d] -translate-y-full peer-checked:translate-y-0 transition-all duration-500 md:static md:translate-x-0 md:bg-none"
     >
       <ul
-        class="h-max grid gap-5 mt-[50%] text-center text-xl font-bold md:grid-flow-col md:static md:mt-0"
+        class="h-max grid gap-5 mt-[50%] text-center text-xl font-bold md:grid-flow-col md:static md:mt-0 magicNav"
       >
-        <li><a class="hover:brightness-75 hover:underline" href="#top">Home</a></li>
-        <li><a class="hover:brightness-75 hover:underline" href="#experiencia">Experiencia</a></li>
-        <li><a class="hover:brightness-75 hover:underline" href="#proyectos">Proyectos</a></li>
-        <li><a class="hover:brightness-75 hover:underline" href="#acerca">Acerca de</a></li>
-        <li><a class="hover:brightness-75 hover:underline" href="#contacto">Contacto</a></li>
+        <li>
+          <a class="hover:brightness-75 hover:underline" href="#top">Home</a>
+        </li>
+        <li>
+          <a class="hover:brightness-75 hover:underline" href="#experiencia"
+            >Experiencia</a
+          >
+        </li>
+        <li>
+          <a class="hover:brightness-75 hover:underline" href="#proyectos"
+            >Proyectos</a
+          >
+        </li>
+        <li>
+          <a class="hover:brightness-75 hover:underline" href="#acerca"
+            >Acerca de</a
+          >
+        </li>
+        <li>
+          <a class="hover:brightness-75 hover:underline" href="#contacto"
+            >Contacto</a
+          >
+        </li>
       </ul>
     </div>
   </nav>
 </section>
+
+<style>
+  @media screen and (width > 768px) {
+    .magicNav {
+      animation: magicNav linear both;
+      animation-timeline: scroll(root);
+      animation-range: 0 200px;
+    }
+    /* .move {
+      animation-name: move;
+      animation-duration: 1s;
+    } */
+  }
+  /* @keyframes move {
+    from {
+      opacity: 0;
+      transform: translateY(-80px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }*/
+  @keyframes magicNav {
+    to {
+      height: min-content;
+      background-color: #faebd766;
+      width: 100%;
+      backdrop-filter: blur(5px);
+      font-size: 16px;
+    }
+  }
+</style>
+<!--<script>
+  window.addEventListener("scroll", function () {
+    const section = document.getElementById("section");
+
+    if (this.window.scrollY <= 0) {
+      section?.classList.add("move");
+    } else if (this.window.scrollY > 100) {
+      section?.classList.remove("move");
+    }
+  });
+</script> -->
