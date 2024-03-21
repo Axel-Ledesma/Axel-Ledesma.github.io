@@ -10,7 +10,15 @@ export default {
       colors: {
         main: "#faebd7",
       },
-      
+      keyframes: {
+        "bg-animated": {
+          "0%, 100%": { "background-position": "0%, 50%" },
+          "50%": { "background-position": "100%, 50%" },
+        },
+      },
+      animation: {
+        "bg-animated": "bg-animated 7s ease infinite",
+      },
     },
   },
   plugins: [],

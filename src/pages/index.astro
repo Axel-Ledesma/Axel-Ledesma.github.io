@@ -19,7 +19,7 @@ import Cv from "../components/extras/Cv.astro";
     <Navbar />
   </nav>
   <main>
-    <div class="bg-animated">
+    <div class="animate-bg-animated">
       <section
         class="pt-60 px-4 md:pt-40 md:gap-8 md:justify-center md:items-center"
       >
@@ -46,18 +46,8 @@ import Cv from "../components/extras/Cv.astro";
 </Layout>
 
 <style>
-  .bg-animated {
+  .animate-bg-animated {
     background: linear-gradient(45deg, #46363b, #3b3638, #58545b, #1c252c);
-    animation: bg-animated 7s ease infinite;
     background-size: 400% 400%;
-  }
-  @keyframes bg-animated {
-    0%,
-    100% {
-      background-position: 0%, 50%;
-    }
-    50% {
-      background-position: 100%, 50%;
-    }
   }
 </style>
