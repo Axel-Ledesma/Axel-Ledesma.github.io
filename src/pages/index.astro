@@ -19,23 +19,23 @@ import Cv from "../components/extras/Cv.astro";
     <Navbar />
   </nav>
   <main>
-    <div class="space-y-10 pt-20 pb-5 px-4 md:flex md:gap-8 md:justify-center md:items-center lg:py-40">
-      <img
-        class="aspect-[376/376] size-40 md:max-w-60 rounded mx-auto md:mx-0"
-        src="/foto.webp"
-        alt="Foto de Axel Ledesma"
-      />
-      <h1 class="text-center text-5xl md:text-7xl lg:text-8xl">
-        Axel Ledesma <br />
-        <Line class="border-b m-auto w-20 md:w-40 border-main flex py-1" />
-        Programador Web
-      </h1>
+    <div class="bg-animated">
+      <section
+        class="pt-60 px-4 md:pt-40 md:gap-8 md:justify-center md:items-center"
+      >
+        <h1 class="py-4 text-center text-5xl md:text-7xl lg:text-8xl">
+          Axel Ledesma
+        </h1>
+        <h2 class="text-center text-3xl md:text-7xl lg:text-8xl">
+          Programador Web
+        </h2>
+        <div class="flex gap-4 justify-center items-center py-6">
+          <Linkedin />
+          <Github />
+        </div>
+        <Cv />
+      </section>
     </div>
-    <div class="flex gap-4 justify-center items-center py-4">
-      <Linkedin />
-      <Github />
-    </div>
-    <Cv />
     <Experiencie />
     <Projects />
     <About />
@@ -44,3 +44,20 @@ import Cv from "../components/extras/Cv.astro";
     <Contact />
   </footer>
 </Layout>
+
+<style>
+  .bg-animated {
+    background: linear-gradient(45deg, #46363b, #3b3638, #58545b, #1c252c);
+    animation: bg-animated 7s ease infinite;
+    background-size: 400% 400%;
+  }
+  @keyframes bg-animated {
+    0%,
+    100% {
+      background-position: 0%, 50%;
+    }
+    50% {
+      background-position: 100%, 50%;
+    }
+  }
+</style>

@@ -8,8 +8,9 @@ export default {
         "cerrar-menu": "url('../menu/close.svg')",
       },
       colors: {
-       main: "#faebd7",
+        main: "#faebd7",
       },
+      
     },
   },
   plugins: [],

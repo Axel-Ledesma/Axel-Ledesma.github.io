@@ -46,12 +46,12 @@
       animation-timeline: scroll(root);
       animation-range: 0 200px;
     }
-    /* .move {
+     .move {
       animation-name: move;
-      animation-duration: 1s;
-    } */
+      animation-duration: 500ms;
+    } 
   }
-  /* @keyframes move {
+   @keyframes move {
     from {
       opacity: 0;
       transform: translateY(-80px);
@@ -60,7 +60,7 @@
       opacity: 1;
       transform: translateY(0);
     }
-  }*/
+  }
   @keyframes magicNav {
     to {
       height: min-content;
@@ -71,7 +71,7 @@
     }
   }
 </style>
-<!--<script>
+<script>
   window.addEventListener("scroll", function () {
     const section = document.getElementById("section");
 
@@ -81,4 +81,4 @@
       section?.classList.remove("move");
     }
   });
-</script> -->
+</script> 
