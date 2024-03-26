@@ -15,22 +15,22 @@
           <a class="hover:brightness-75 hover:underline" href="#top">Home</a>
         </li>
         <li>
-          <a class="hover:brightness-75 hover:underline" href="#experiencia"
+          <a class="hover:brightness-75 hover:underline" href="#experiencie"
             >Experiencia</a
           >
         </li>
         <li>
-          <a class="hover:brightness-75 hover:underline" href="#proyectos"
+          <a class="hover:brightness-75 hover:underline" href="#projects"
             >Proyectos</a
           >
         </li>
         <li>
-          <a class="hover:brightness-75 hover:underline" href="#acerca"
-            >Acerca de</a
+          <a class="hover:brightness-75 hover:underline" href="#about"
+            >Sobre mí</a
           >
         </li>
         <li>
-          <a class="hover:brightness-75 hover:underline" href="#contacto"
+          <a class="hover:brightness-75 hover:underline" href="#contact"
             >Contacto</a
           >
         </li>
@@ -46,12 +46,12 @@
       animation-timeline: scroll(root);
       animation-range: 0 200px;
     }
-     .move {
+    .move {
       animation-name: move;
       animation-duration: 500ms;
-    } 
+    }
   }
-   @keyframes move {
+  @keyframes move {
     from {
       opacity: 0;
       transform: translateY(-80px);
@@ -63,6 +63,8 @@
   }
   @keyframes magicNav {
     to {
+      padding-inline: 4px;
+      border-radius: 6px;
       height: min-content;
       background-color: #faebd766;
       width: 100%;
@@ -81,4 +83,4 @@
       section?.classList.remove("move");
     }
   });
-</script> 
+</script>
